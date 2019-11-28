@@ -1,0 +1,26 @@
+{
+  "name": "@operarius/vue-cli-preset-project",
+  "version": "0.0.0",
+  "description": "Vue CLI preset for project generation",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "operarius",
+    "config",
+    "preset",
+    "vue-cli",
+    "vue"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "homepage": "https://github.com/preusx/operarius"
+}

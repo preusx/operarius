@@ -1,0 +1,20 @@
+{
+  "useConfigFiles": true,
+  "plugins": {
+    "@vue/cli-plugin-babel": {},
+    "@vue/cli-plugin-eslint": {
+      "config": "base",
+      "lintOn": [
+        "save",
+        "commit"
+      ]
+    },
+    "vue-cli-plugin-element": {
+      "prompts": true
+    },
+    "@vue/cli-plugin-unit-mocha": {}
+  },
+  "router": true,
+  "routerHistoryMode": true,
+  "cssPreprocessor": "dart-sass"
+}
