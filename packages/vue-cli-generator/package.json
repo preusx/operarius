@@ -1,8 +1,11 @@
 {
-  "name": "@operarius/vue-cli-preset-project",
+  "name": "@operarius/vue-cli-generator",
   "version": "0.0.0",
   "description": "Vue CLI preset for project generation",
   "main": "index.js",
+  "bin": {
+    "operarius-vue-create": "bin/cli.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -22,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/preusx/operarius/issues"
   },
-  "homepage": "https://github.com/preusx/operarius"
+  "homepage": "https://github.com/preusx/operarius",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
