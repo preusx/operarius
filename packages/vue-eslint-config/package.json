@@ -1,7 +1,7 @@
 {
-  "name": "@operarius/eslint-config",
+  "name": "@operarius/vue-eslint-config",
   "version": "0.0.0",
-  "description": "Eslint configuration",
+  "description": "Vue eslint configuration",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
@@ -14,6 +14,7 @@
     "configuration",
     "operarius",
     "config",
+    "vue",
     "eslint"
   ],
   "author": "Alex Tkachenko",
@@ -23,11 +24,6 @@
   },
   "homepage": "https://github.com/preusx/operarius",
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-import-resolver-webpack": "^0.11.1",
-    "eslint-plugin-import": "^2.18.2"
-  },
-  "peerDependencies": {
-    "eslint": "^5.16.0 || ^6.1.0"
+    "@operarius/eslint-config": "^0.0.0"
   }
 }
