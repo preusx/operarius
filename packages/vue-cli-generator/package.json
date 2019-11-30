@@ -4,7 +4,8 @@
   "description": "Vue CLI preset for project generation",
   "main": "index.js",
   "bin": {
-    "operarius-vue-create": "bin/cli.js"
+    "operarius-vue-create": "bin/cli.js",
+    "ovc": "bin/cli.js"
   },
   "publishConfig": {
     "access": "public"

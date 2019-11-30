@@ -12,6 +12,7 @@ Commands:
 
 const { spawn } = require('child_process');
 const path = require('path');
+const preset = require('../generators/preset');
 
 const rawArgv = process.argv.slice(2);
 const passed = require('minimist')(rawArgv, {
@@ -25,19 +26,29 @@ if (passed.help || passed.h) {
 create(passed);
 
 function create(args) {
-  const [name, preset = 'project'] = args._;
-  const presetPath = path.dirname(require.resolve(`../presets/${preset}`));
+  const [name, presetName = 'project'] = args._;
+  const { internal } = args;
+  const presetPath = path.dirname(require.resolve(`../presets/${presetName}`));
 
   const parameters = [
     'create', name || '', '--preset', presetPath
   ].concat(args['--']);
 
+  preset.generate(presetPath, { internal });
+
   const subprocess = spawn('vue', parameters, {
     stdio: [process.stdin, process.stdout, process.stderr],
+    env: {
+      ...process.env,
+      'VUE_CLI_GENERATOR_INTERNAL_MODE': internal || void(0),
+    },
     shell: true
   });
 
-  subprocess.on('close', process.exit);
+  subprocess.on('close', code => {
+    preset.clear(presetPath);
+    process.exit(code);
+  });
 }
 
 function help() {
