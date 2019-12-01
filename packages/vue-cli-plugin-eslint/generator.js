@@ -1,4 +1,5 @@
 const { version } = require('./package.json');
+
 const ADDED_ESLINT_CONFIG = 'eslint:recommended';
 const ESLINT_CONFIG = '@operarius/vue-eslint-config';
 
@@ -17,4 +18,4 @@ module.exports = api => {
       [ESLINT_CONFIG]: `^${version}`,
     },
   });
-}
+};

@@ -12,18 +12,13 @@ Commands:
 
 const { spawn } = require('child_process');
 const path = require('path');
+const minimist = require('minimist');
 const preset = require('../generators/preset');
 
 const rawArgv = process.argv.slice(2);
-const passed = require('minimist')(rawArgv, {
+const passed = minimist(rawArgv, {
   '--': true,
 });
-
-if (passed.help || passed.h) {
-  return help();
-}
-
-create(passed);
 
 function create(args) {
   const [name, presetName = 'project'] = args._;
@@ -31,7 +26,7 @@ function create(args) {
   const presetPath = path.dirname(require.resolve(`../presets/${presetName}`));
 
   const parameters = [
-    'create', name || '', '--preset', presetPath
+    'create', name || '', '--preset', presetPath,
   ].concat(args['--']);
 
   preset.generate(presetPath, { internal });
@@ -40,9 +35,9 @@ function create(args) {
     stdio: [process.stdin, process.stdout, process.stderr],
     env: {
       ...process.env,
-      'VUE_CLI_GENERATOR_INTERNAL_MODE': internal || void(0),
+      VUE_CLI_GENERATOR_INTERNAL_MODE: internal || undefined,
     },
-    shell: true
+    shell: true,
   });
 
   subprocess.on('close', code => {
@@ -52,5 +47,12 @@ function create(args) {
 }
 
 function help() {
-  console.log(MAN);
+  process.stdout.write(MAN);
 }
+
+if (passed.help || passed.h) {
+  help();
+  process.exit(0);
+}
+
+create(passed);

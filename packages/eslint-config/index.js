@@ -19,6 +19,7 @@ module.exports = {
       ts: 'never',
       tsx: 'never',
     }],
+    'arrow-parens': ['error', 'as-needed'],
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [

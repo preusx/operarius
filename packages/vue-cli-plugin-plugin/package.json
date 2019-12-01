@@ -1,12 +1,8 @@
 {
-  "name": "@operarius/vue-cli-generator",
+  "name": "@operarius/vue-cli-plugin-plugin",
   "version": "0.0.0",
-  "description": "Vue CLI preset for project generation",
+  "description": "Vue cli plugin Vue plugin development",
   "main": "index.js",
-  "bin": {
-    "operarius-vue-create": "bin/cli.js",
-    "ovc": "bin/cli.js"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -15,10 +11,12 @@
     "url": "git+https://github.com/preusx/operarius.git"
   },
   "keywords": [
+    "configuration",
     "operarius",
     "config",
-    "preset",
     "vue-cli",
+    "vue-cli-plugin",
+    "plugin",
     "vue"
   ],
   "author": "Alex Tkachenko",
@@ -26,13 +24,10 @@
   "bugs": {
     "url": "https://github.com/preusx/operarius/issues"
   },
+  "homepage": "https://github.com/preusx/operarius",
   "scripts": {
     "lint": "eslint .",
     "prepublishOnly": "yarn lint"
-  },
-  "homepage": "https://github.com/preusx/operarius",
-  "dependencies": {
-    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
