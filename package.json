@@ -4,6 +4,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "create:plugin": "ovc check plugin --internal",
+    "create:project": "ovc check project --internal"
+  },
   "devDependencies": {
     "lerna": "^3.18.4"
   }

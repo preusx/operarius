@@ -1,0 +1,29 @@
+{
+  "name": "@operarius/vue-eslint-config",
+  "version": "0.0.0",
+  "description": "Vue eslint configuration",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "configuration",
+    "operarius",
+    "config",
+    "vue",
+    "eslint"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "dependencies": {
+    "@operarius/eslint-config": "^0.0.0"
+  }
+}

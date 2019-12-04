@@ -1,0 +1,38 @@
+{
+  "name": "@operarius/vue-cli-plugin-eslint",
+  "version": "0.0.0",
+  "description": "Vue cli plugin for custom eslint config injection",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "configuration",
+    "operarius",
+    "config",
+    "vue-cli",
+    "vue-cli-plugin",
+    "plugin",
+    "vue",
+    "eslint"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "yarn lint"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "babel-eslint": "^10.0.3",
+    "@operarius/eslint-config": "^0.0.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@operarius/vue-cli-generator",
+  "version": "0.0.0",
+  "description": "Vue CLI preset for project generation",
+  "main": "index.js",
+  "bin": {
+    "operarius-vue-create": "bin/cli.js",
+    "ovc": "bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "operarius",
+    "config",
+    "preset",
+    "vue-cli",
+    "vue"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "yarn lint"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "babel-eslint": "^10.0.3",
+    "@operarius/eslint-config": "^0.0.0"
+  }
+}
