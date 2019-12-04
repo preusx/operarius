@@ -1,5 +1,5 @@
 const path = require('path');
-const Service = require('@vue/cli-service');
+const Service = require('@vue/cli-service'); // eslint-disable-line import/no-unresolved
 
 function plugin(context, entry) {
   return {
@@ -14,13 +14,13 @@ function plugin(context, entry) {
           .add(path.resolve(context, entry));
 
         config.resolve.alias
-          .set("@example", path.resolve(context, entryDir));
+          .set('@example', path.resolve(context, entryDir));
 
         config
           .plugin('html')
           .tap(args => {
-            args[0].template = path.resolve(context, path.join(entryDir, 'index.html'))
-            return args
+            args[0].template = path.resolve(context, path.join(entryDir, 'index.html')); // eslint-disable-line no-param-reassign
+            return args;
           });
 
         config.plugins.delete('copy');

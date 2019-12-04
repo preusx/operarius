@@ -4,7 +4,7 @@ const path = require('path');
 function clearDirectory(context, directory, templatePath) {
   const files = fs.readdirSync(path.join(context, directory), { withFileTypes: true });
 
-  for (file of files) {
+  files.forEach(file => {
     if (file.isDirectory()) {
       clearDirectory(context, path.join(directory, file.name), templatePath);
     } else {
@@ -14,19 +14,20 @@ function clearDirectory(context, directory, templatePath) {
         fs.unlinkSync(path.join(context, p));
       }
     }
-  }
+  });
 
   fs.rmdir(path.join(context, directory), () => {});
 }
 
 module.exports = (api, options, rootOptions) => {
   const { projectName } = rootOptions;
-  const templateSrc = path.dirname(path.dirname(require.resolve('./template/src')));
+  const templateSrc = path.dirname(path.dirname(require.resolve('./template/base/src')));
 
   api.extendPackage({
     scripts: {
-      'build': `vue-cli-service build --target lib --name ${projectName} --dest dist/`,
-      'serve': 'vue-cli-service example demo/main.js',
+      build: `vue-cli-service build src/index.js --target lib --name ${projectName} --dest dist/`,
+      serve: 'vue-cli-service example example/main.js',
+      lint: 'vue-cli-service plugin-lint',
     },
     sideeffects: false,
     main: `dist/${projectName}.common.js`,
@@ -38,11 +39,15 @@ module.exports = (api, options, rootOptions) => {
       `dist/${projectName}.umd.min.js`,
       `dist/${projectName}.umd.js`,
       `dist/${projectName}.css`,
-      'src'
-    ]
+      'src',
+    ],
   });
 
-  api.render('./template');
+  api.render('./template/base');
+
+  if (api.hasPlugin('unit-jest')) {
+    api.render('./template/tests/jest');
+  }
 
   api.onCreateComplete(() => {
     // We do not need other files that those we have in plugin's template

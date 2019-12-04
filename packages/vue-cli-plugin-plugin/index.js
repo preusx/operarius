@@ -1,17 +1,21 @@
+const path = require('path');
 const exampleCommand = require('./commands/example');
+const lintCommand = require('./commands/lint');
 
 module.exports = api => {
   api.chainWebpack(config => {
     config
-      .entry("app")
+      .entry('app')
       .clear()
-      .add("./src/index.js")
+      .add('./src/index.js')
       .end();
 
     config.resolve.alias
-      .set("@example", path.join(__dirname, "./example"));
+      .set('@example', path.join(__dirname, './example'));
   });
 
   const example = exampleCommand(api);
+  const lint = lintCommand(api);
   api.registerCommand('example', example.opts, example.fn);
+  api.registerCommand('plugin-lint', lint.opts, lint.fn);
 };

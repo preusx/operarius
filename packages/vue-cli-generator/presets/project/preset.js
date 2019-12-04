@@ -15,7 +15,7 @@ module.exports = ({ internal } = {}) => ({
         ? 'file:../packages/vue-cli-plugin-eslint'
         : version,
     },
-    '@vue/cli-plugin-unit-mocha': {},
+    '@vue/cli-plugin-unit-jest': {},
   },
   router: true,
   routerHistoryMode: true,

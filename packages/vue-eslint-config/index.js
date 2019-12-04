@@ -1,11 +1,13 @@
+const webpackConfig = require.resolve('@vue/cli-service/webpack.config.js');
+
 module.exports = {
   extends: [
-    require.resolve('@operarius/vue-eslint-config'),
+    require.resolve('@operarius/eslint-config'),
   ],
   settings: {
     'import/resolver': {
       webpack: {
-        config: require.resolve('@vue/cli-service/webpack.config.js'),
+        config: webpackConfig,
       },
     },
   },
