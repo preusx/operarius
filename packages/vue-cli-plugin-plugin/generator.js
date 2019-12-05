@@ -25,7 +25,6 @@ module.exports = (api, options, rootOptions) => {
 
   api.extendPackage({
     scripts: {
-      prepublish: 'yarn lint',
       prepublishOnly: 'yarn lint && yarn test:unit && yarn build',
       build: `vue-cli-service build src/index.js --target lib --name ${projectName} --dest dist/`,
       serve: 'vue-cli-service example example/main.js',
