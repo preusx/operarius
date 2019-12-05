@@ -22,6 +22,7 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'no-mixed-operators': 'off',
     'no-plusplus': 'off',
+    'operator-linebreak': ['error', 'after', { overrides: { '?': 'ignore', ':': 'ignore' } }],
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
