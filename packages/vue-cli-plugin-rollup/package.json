@@ -1,0 +1,47 @@
+{
+  "name": "@operarius/vue-cli-plugin-rollup",
+  "version": "0.0.0",
+  "description": "Vue cli plugin Vue rollup development",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "configuration",
+    "operarius",
+    "config",
+    "vue-cli",
+    "vue-cli-plugin",
+    "rollup",
+    "vue"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "yarn lint"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "uglify-js": "^3.7.1",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-vue": "^5.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "babel-eslint": "^10.0.3",
+    "@operarius/eslint-config": "^0.0.0"
+  }
+}

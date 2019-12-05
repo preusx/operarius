@@ -4,12 +4,6 @@ const lintCommand = require('./commands/lint');
 
 module.exports = api => {
   api.chainWebpack(config => {
-    config
-      .entry('app')
-      .clear()
-      .add('./src/index.js')
-      .end();
-
     config.resolve.alias
       .set('@example', path.join(__dirname, './example'));
   });

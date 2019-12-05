@@ -1,5 +1,5 @@
 import { createLocalVue } from '@vue/test-utils';
-import Plugin from '@/index';
+import Plugin from '@/main';
 
 it('Installs silently', () => {
   const localVue = createLocalVue();

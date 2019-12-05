@@ -20,6 +20,8 @@ module.exports = {
       tsx: 'never',
     }],
     'arrow-parens': ['error', 'as-needed'],
+    'no-mixed-operators': 'off',
+    'no-plusplus': 'off',
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [
