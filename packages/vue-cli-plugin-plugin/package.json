@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-plugin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Vue cli plugin Vue plugin development",
   "main": "index.js",
   "publishConfig": {
@@ -30,8 +30,8 @@
     "prepublishOnly": "yarn lint"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
+    "@operarius/eslint-config": "^0.1.0",
     "babel-eslint": "^10.0.3",
-    "@operarius/eslint-config": "^0.0.0"
+    "eslint": "^6.7.2"
   }
 }
