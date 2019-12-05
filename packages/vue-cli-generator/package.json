@@ -30,7 +30,7 @@
     "lint": "eslint .",
     "prepublishOnly": "yarn lint"
   },
-  "homepage": "https://github.com/preusx/operarius",
+  "homepage": "https://github.com/preusx/operarius/tree/master/packages/vue-cli-generator",
   "dependencies": {
     "minimist": "^1.2.0"
   },
