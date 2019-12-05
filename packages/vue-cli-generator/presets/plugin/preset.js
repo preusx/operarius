@@ -21,6 +21,16 @@ module.exports = ({ internal } = {}) => ({
         ? 'file:../packages/vue-cli-plugin-plugin'
         : version,
     },
+    '@operarius/vue-cli-plugin-rollup': {
+      version: internal
+        ? 'file:../packages/vue-cli-plugin-rollup'
+        : version,
+    },
+    '@operarius/vue-cli-plugin-postcss': {
+      version: internal
+        ? 'file:../packages/vue-cli-plugin-postcss'
+        : version,
+    },
   },
   cssPreprocessor: 'dart-sass',
 });

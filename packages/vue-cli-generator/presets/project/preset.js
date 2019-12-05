@@ -16,6 +16,11 @@ module.exports = ({ internal } = {}) => ({
         : version,
     },
     '@vue/cli-plugin-unit-jest': {},
+    '@operarius/vue-cli-plugin-postcss': {
+      version: internal
+        ? 'file:../packages/vue-cli-plugin-postcss'
+        : version,
+    },
   },
   router: true,
   routerHistoryMode: true,

@@ -21,10 +21,11 @@ function clearDirectory(context, directory, templatePath) {
 
 module.exports = (api, options, rootOptions) => {
   const { projectName } = rootOptions;
-  const templateSrc = path.dirname(path.dirname(require.resolve('./template/base/src')));
+  const templateSrc = path.dirname(path.dirname(require.resolve('./template/base/src/main')));
 
   api.extendPackage({
     scripts: {
+      prepublishOnly: 'yarn lint && yarn test:unit && yarn build',
       build: `vue-cli-service build src/index.js --target lib --name ${projectName} --dest dist/`,
       serve: 'vue-cli-service example example/main.js',
       lint: 'vue-cli-service plugin-lint',

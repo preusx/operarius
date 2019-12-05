@@ -1,0 +1,45 @@
+{
+  "name": "@operarius/postcss-config",
+  "version": "0.0.0",
+  "description": "Postcss configuration",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "configuration",
+    "operarius",
+    "config",
+    "postcss"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "dependencies": {
+    "css-mqpacker": "7.0.0",
+    "postcss-selector-not": "4.0.0",
+    "postcss-alias": "2.0.0",
+    "postcss-quantity-queries": "0.5.0",
+    "postcss-calc": "^7.0.1",
+    "postcss-round-subpixels": "^1.2.0",
+    "autoprefixer": "^9.7.3"
+  },
+  "peerDependencies": {
+    "postcss": "^7.x"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "babel-eslint": "^10.0.3"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "yarn lint"
+  }
+}
