@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "lerna": "^3.18.4",
-    "@operarius/git-hooks": "^0.2.0",
+    "@operarius/git-hooks": "^0.2.1",
     "yorkie": "^2.0.0"
   }
 }
