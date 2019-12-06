@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function clearDirectory(context, directory, templatePath) {
+function clearDirectory(context, directory, templatePath = null) {
   const files = fs.readdirSync(path.join(context, directory), { withFileTypes: true });
 
   files.forEach(file => {
@@ -10,7 +10,7 @@ function clearDirectory(context, directory, templatePath) {
     } else {
       const p = path.join(directory, file.name);
 
-      if (!fs.existsSync(path.join(templatePath, p))) {
+      if (templatePath === null || !fs.existsSync(path.join(templatePath, p))) {
         fs.unlinkSync(path.join(context, p));
       }
     }
@@ -51,6 +51,9 @@ module.exports = (api, options, rootOptions) => {
   }
 
   api.onCreateComplete(() => {
+    // Removing `public` directory
+    clearDirectory(api.generator.context, 'public');
+
     // We do not need other files that those we have in plugin's template
     clearDirectory(api.generator.context, path.dirname(api.entryFile), templateSrc);
   });
