@@ -13,12 +13,17 @@
     "commit-msg": "operarius-git-hooks commit-msg"
   },
   "scripts": {
+    "packages:check": "ncu && lerna exec -- ncu",
+    "packages:update": "ncu -u && lerna exec -- ncu -u",
+    "publish": "yarn lint && yarn test && lerna publish",
+    "test": "lerna run test:unit",
     "lint": "lerna run lint",
     "create:plugin": "ovc check plugin --internal",
     "create:project": "ovc check project --internal"
   },
   "devDependencies": {
-    "lerna": "^3.18.4",
+    "lerna": "^3.19.0",
+    "npm-check-updates": "^3.2.2",
     "@operarius/git-hooks": "^0.2.1",
     "yorkie": "^2.0.0"
   }
