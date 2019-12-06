@@ -15,7 +15,7 @@
   "scripts": {
     "packages:check": "ncu && lerna exec -- ncu",
     "packages:update": "ncu -u && lerna exec -- ncu -u",
-    "publish": "yarn lint && yarn test && lerna publish",
+    "release": "yarn lint && yarn test && lerna publish",
     "test": "lerna run test:unit",
     "lint": "lerna run lint",
     "create:plugin": "ovc check plugin --internal",
