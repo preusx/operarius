@@ -1,6 +1,4 @@
-const info = require('../../package.json');
-
-const version = `v${info.version}`;
+const { devDependencies } = require('./package.json');
 
 module.exports = ({ internal } = {}) => ({
   useConfigFiles: true,
@@ -13,18 +11,18 @@ module.exports = ({ internal } = {}) => ({
     '@operarius/vue-cli-plugin-eslint': {
       version: internal
         ? 'file:../packages/vue-cli-plugin-eslint'
-        : version,
+        : devDependencies['@operarius/vue-cli-plugin-eslint'],
     },
     '@vue/cli-plugin-unit-jest': {},
     '@operarius/vue-cli-plugin-postcss': {
       version: internal
         ? 'file:../packages/vue-cli-plugin-postcss'
-        : version,
+        : devDependencies['@operarius/vue-cli-plugin-postcss'],
     },
     '@operarius/vue-cli-plugin-git-hooks': {
       version: internal
         ? 'file:../packages/vue-cli-plugin-git-hooks'
-        : version,
+        : devDependencies['@operarius/vue-cli-plugin-git-hooks'],
     },
   },
   router: true,

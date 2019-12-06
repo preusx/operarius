@@ -1,0 +1,11 @@
+{
+  "name": "@operarius/vue-cli-generator-presets-plugin",
+  "private": true,
+  "devDependencies": {
+    "@operarius/vue-cli-plugin-eslint": "^0.3.0",
+    "@operarius/vue-cli-plugin-postcss": "^0.3.0",
+    "@operarius/vue-cli-plugin-git-hooks": "^0.3.0",
+    "@operarius/vue-cli-plugin-plugin": "^0.3.2",
+    "@operarius/vue-cli-plugin-rollup": "^0.3.3"
+  }
+}

@@ -1,4 +1,4 @@
-const { version } = require('./package.json');
+const { devDependencies } = require('./package.json');
 
 const LIBRARY_NAME = 'git-hooks';
 const GIT_HOOKS = `@operarius/${LIBRARY_NAME}`;
@@ -28,7 +28,7 @@ module.exports = api => {
     devDependencies: {
       [GIT_HOOKS]: process.env.VUE_CLI_GENERATOR_INTERNAL_MODE
         ? `file:../packages/${LIBRARY_NAME}`
-        : `^${version}`,
+        : devDependencies[GIT_HOOKS],
     },
   });
 };

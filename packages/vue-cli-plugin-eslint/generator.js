@@ -1,4 +1,4 @@
-const { version } = require('./package.json');
+const { devDependencies } = require('./package.json');
 
 const ADDED_ESLINT_CONFIG = 'eslint:recommended';
 const LIBRARY_NAME = 'vue-eslint-config';
@@ -20,7 +20,7 @@ module.exports = api => {
     devDependencies: {
       [ESLINT_CONFIG]: process.env.VUE_CLI_GENERATOR_INTERNAL_MODE
         ? `file:../packages/${LIBRARY_NAME}`
-        : `^${version}`,
+        : devDependencies[ESLINT_CONFIG],
     },
   });
 };

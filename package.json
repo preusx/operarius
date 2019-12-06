@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/vue-cli-generator/presets/*"
   ],
   "gitHooks": {
     "pre-commit": "operarius-git-hooks pre-commit",
@@ -18,7 +19,7 @@
     "release": "yarn lint && yarn test && lerna publish",
     "test": "lerna run test:unit",
     "lint": "lerna run lint",
-    "create:plugin": "ovc check plugin --internal",
+    "create:plugin": "ovc check plugin",
     "create:project": "ovc check project --internal"
   },
   "devDependencies": {
