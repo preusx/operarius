@@ -15,7 +15,7 @@ module.exports = (pkg, inOut) => {
       author,
       year: new Date().getFullYear(),
       license,
-    }),
+    })
   );
 
   return bundle(entries);

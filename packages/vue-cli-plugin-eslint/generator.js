@@ -4,12 +4,6 @@ const ADDED_ESLINT_CONFIG = 'eslint:recommended';
 const LIBRARY_NAME = 'vue-eslint-config';
 const ESLINT_CONFIG = `@operarius/${LIBRARY_NAME}`;
 
-function makeJSOnlyValue(str) {
-  const fn = () => {};
-  fn.__expression = str; // eslint-disable-line no-underscore-dangle
-  return fn;
-}
-
 module.exports = api => {
   const { eslintConfig } = api.generator.pkg;
 
@@ -19,7 +13,7 @@ module.exports = api => {
   }
 
   eslintConfig.extends.push(
-    makeJSOnlyValue(`require.resolve('${ESLINT_CONFIG}')`),
+    api.makeJSOnlyValue(`require.resolve('${ESLINT_CONFIG}')`)
   );
   api.extendPackage({
     eslintConfig,

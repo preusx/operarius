@@ -1,0 +1,39 @@
+{
+  "name": "@operarius/git-hooks",
+  "version": "0.1.0",
+  "description": "Default project git hooks",
+  "bin": {
+    "operarius-git-hooks": "bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preusx/operarius.git"
+  },
+  "keywords": [
+    "operarius",
+    "git",
+    "hooks"
+  ],
+  "author": "Alex Tkachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preusx/operarius/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "yarn lint"
+  },
+  "homepage": "https://github.com/preusx/operarius",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {
+    "@operarius/eslint-config": "^0.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2"
+  }
+}

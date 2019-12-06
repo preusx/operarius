@@ -5,7 +5,7 @@ const uglify = require('uglify-js');
 const chalk = require('chalk');
 const rollup = require('rollup');
 
-const { error, log } = require(require.resolve('@vue/cli-shared-utils')); // eslint-disable-line import/no-dynamic-require
+const { error, log } = require(require.resolve('@vue/cli-shared-utils'));
 
 const getSize = code => `${(code.length / 1024).toFixed(2)}kb`;
 

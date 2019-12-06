@@ -21,6 +21,11 @@ module.exports = ({ internal } = {}) => ({
         ? 'file:../packages/vue-cli-plugin-postcss'
         : version,
     },
+    '@operarius/vue-cli-plugin-git-hooks': {
+      version: internal
+        ? 'file:../packages/vue-cli-plugin-git-hooks'
+        : version,
+    },
   },
   router: true,
   routerHistoryMode: true,

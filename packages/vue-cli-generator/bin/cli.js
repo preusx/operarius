@@ -3,11 +3,11 @@
 const MAN = `Usage: operarius-vue-create <app-name> <preset> -- [options]
 
 Options:
-  -h, --help                                 Output usage information.
-
-Commands:
   <preset>                                   Use preset you want. Default: project.
   <app-name>                                 Name of the project you want to create.
+
+  -h, --help                                 Output usage information.
+
   [options]                                  Optional \`vue\` cli additional options for \`create\` command.`;
 
 const { spawn } = require('child_process');
