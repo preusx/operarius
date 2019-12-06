@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "gitHooks": {
-    "pre-commit": "yarn lint && operarius-git-hooks pre-commit",
+    "pre-commit": "operarius-git-hooks pre-commit",
     "pre-push": "operarius-git-hooks pre-push",
     "post-commit": "operarius-git-hooks post-commit",
     "post-checkout": "operarius-git-hooks post-checkout",

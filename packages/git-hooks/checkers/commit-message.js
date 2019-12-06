@@ -5,7 +5,7 @@ const process = require('process');
 const utils = require('../utils.js');
 
 module.exports = () => {
-  const file = path.resolve(process.env.PWD, process.env.HUSKY_GIT_PARAMS);
+  const file = path.resolve(process.env.PWD, process.env.HUSKY_GIT_PARAMS || process.env.GIT_PARAMS);
   const lines = fs.readFileSync(file).toString('utf-8').split('\n');
 
   if (lines[0].length > 72) {
