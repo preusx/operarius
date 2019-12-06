@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-generator",
-  "version": "0.3.0",
+  "version": "0.3.4",
   "description": "Vue CLI preset for project generation",
   "main": "index.js",
   "bin": {

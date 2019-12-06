@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-git-hooks",
-  "version": "0.3.0",
+  "version": "0.3.4",
   "description": "Vue cli plugin for git-hooks injection",
   "main": "index.js",
   "publishConfig": {
@@ -35,8 +35,8 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
-    "@operarius/git-hooks": "^0.3.0",
     "@operarius/eslint-config": "^0.3.0",
+    "@operarius/git-hooks": "^0.3.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }

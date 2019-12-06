@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-eslint",
-  "version": "0.3.0",
+  "version": "0.3.4",
   "description": "Vue cli plugin for custom eslint config injection",
   "main": "index.js",
   "publishConfig": {
@@ -31,8 +31,8 @@
     "prepublishOnly": "yarn lint"
   },
   "devDependencies": {
-    "@operarius/vue-eslint-config": "^0.3.0",
     "@operarius/eslint-config": "^0.3.0",
+    "@operarius/vue-eslint-config": "^0.3.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }
