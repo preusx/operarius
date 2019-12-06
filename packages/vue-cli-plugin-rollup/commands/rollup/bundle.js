@@ -38,12 +38,16 @@ function bundleEntry(config) {
     .then(b => b.generate(output))
     .then(({ output: [{ code }] }) => {
       if (isProd) {
-        const minified = (banner ? `${banner}\n` : '') + uglify.minify(code, {
-          fromString: true,
+        const minified = uglify.minify(code, {
           output: { ascii_only: true },
           compress: { pure_funcs: ['makeMap'] },
-        }).code;
-        return write(file, minified, true);
+        });
+
+        if (minified.error) {
+          throw minified.error;
+        }
+
+        return write(file, (banner ? `${banner}\n` : '') + minified.code, true);
       }
       return write(file, code);
     });

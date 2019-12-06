@@ -25,11 +25,16 @@ module.exports = api => ({
       mkdirSync(dest);
     }
 
+    const webpackConfig = api.resolveWebpackConfig();
+    const aliases = webpackConfig.resolve.alias;
+
     return service(
       {
         name, version, author, license,
       },
-      { entry, source, dest: path.join(source, dest) },
+      {
+        entry, source, aliases, dest: path.join(source, dest),
+      },
       args
     );
   },
