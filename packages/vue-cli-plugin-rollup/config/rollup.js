@@ -9,7 +9,7 @@ const VuePlugin = require('rollup-plugin-vue');
 
 const { error } = require(require.resolve('@vue/cli-shared-utils'));
 
-const { dependencies = {} } = require(path.resolve(process.cwd(), 'package.json'));
+const { dependencies = {}, peerDependencies = {} } = require(path.resolve(process.cwd(), 'package.json'));
 const classifyRE = /(?:^|[-_/])(\w)/g;
 const toUpper = (_, c) => (c ? c.toUpperCase() : '');
 
@@ -124,7 +124,7 @@ function getEntryConfig(options, moduleName, version, aliases) {
       // TODO: sourcemap: 'inline'
     },
     // https://github.com/rollup/rollup/issues/1514#issuecomment-320438924
-    external: Object.keys(dependencies),
+    external: Object.keys(dependencies).concat(Object.keys(peerDependencies)),
     plugins,
   };
 }
