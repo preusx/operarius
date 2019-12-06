@@ -24,7 +24,7 @@
   "devDependencies": {
     "lerna": "^3.19.0",
     "npm-check-updates": "^3.2.2",
-    "@operarius/git-hooks": "^0.2.1",
+    "@operarius/git-hooks": "^0.3.0",
     "yorkie": "^2.0.0"
   }
 }

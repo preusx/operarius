@@ -9,7 +9,7 @@ const VuePlugin = require('rollup-plugin-vue');
 
 const { error } = require(require.resolve('@vue/cli-shared-utils'));
 
-const { dependencies } = require(path.resolve(process.cwd(), 'package.json'));
+const { dependencies = {} } = require(path.resolve(process.cwd(), 'package.json'));
 const classifyRE = /(?:^|[-_/])(\w)/g;
 const toUpper = (_, c) => (c ? c.toUpperCase() : '');
 

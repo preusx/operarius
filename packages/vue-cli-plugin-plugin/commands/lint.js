@@ -1,17 +1,23 @@
+const fs = require('fs');
+const path = require('path');
 const Service = require('@vue/cli-service'); // eslint-disable-line import/no-unresolved
 
 function service(context, args, command) {
   return new Service(context).run(command, args);
 }
 
-const defaultFilesToLint = [
+const FOLDER_LINT = [
   'src',
   'tests',
   'example',
+];
+const GLOBS_LINT = [
   // root config files
   '*.js',
   '.*.js',
 ];
+
+const exists = root => p => fs.existsSync(path.join(root, p));
 
 module.exports = api => ({
   opts: {
@@ -20,9 +26,11 @@ module.exports = api => ({
   },
   fn: async args => {
     const context = api.getCwd();
-    args._ = args._ && args._.length // eslint-disable-line no-param-reassign
-      ? args._
-      : defaultFilesToLint;
+    args._ = ['plugin-lint'].concat( // eslint-disable-line no-param-reassign
+      args._ && args._.length
+        ? args._
+        : [].concat(FOLDER_LINT.filter(exists(context)), GLOBS_LINT)
+    );
 
     return service(context, args, 'lint');
   },
