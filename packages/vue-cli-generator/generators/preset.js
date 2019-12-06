@@ -8,7 +8,10 @@ function generate(path, options) {
 }
 
 function clear(path) {
-  fs.unlinkSync(`${path}/preset.json`);
+  const filePath = `${path}/preset.json`;
+  if (fs.existsSync(filePath)) {
+    fs.unlinkSync(filePath);
+  }
 }
 
 module.exports = { generate, clear };
