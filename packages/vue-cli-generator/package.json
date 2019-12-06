@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Vue CLI preset for project generation",
   "main": "index.js",
   "bin": {
@@ -35,7 +35,7 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@operarius/eslint-config": "^0.1.0",
+    "@operarius/eslint-config": "^0.2.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }

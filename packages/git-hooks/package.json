@@ -1,6 +1,6 @@
 {
   "name": "@operarius/git-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Default project git hooks",
   "bin": {
     "operarius-git-hooks": "bin/cli.js"
@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/preusx/operarius",
   "dependencies": {
-    "minimist": "^1.2.0",
-    "chalk": "^3.0.0"
+    "chalk": "^3.0.0",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@operarius/eslint-config": "^0.1.0",
+    "@operarius/eslint-config": "^0.2.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }

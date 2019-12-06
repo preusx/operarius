@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-postcss",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Vue cli plugin for custom postcss config injection",
   "main": "index.js",
   "publishConfig": {
