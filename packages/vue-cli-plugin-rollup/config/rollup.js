@@ -20,7 +20,7 @@ const DEFAULT_BABEL_CONFIG = {
   ],
   extensions: EXTENSIONS,
 };
-const presetKey = x => Array.isArray(x) ? x[0] : x;
+const presetKey = x => (Array.isArray(x) ? x[0] : x);
 const DEFAULT_BABEL_PRESETS_KEYS = DEFAULT_BABEL_CONFIG.presets.map(presetKey);
 
 let babelConfig = DEFAULT_BABEL_CONFIG;
