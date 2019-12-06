@@ -1,10 +1,8 @@
 {
-  "name": "@operarius/hooks",
+  "name": "@operarius/vue-cli-plugin-git-hooks",
   "version": "0.1.0",
-  "description": "Default project git hooks",
-  "bin": {
-    "operarius-hooks": "bin/cli.js"
-  },
+  "description": "Vue cli plugin for git-hooks injection",
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +11,13 @@
     "url": "git+https://github.com/preusx/operarius.git"
   },
   "keywords": [
+    "configuration",
     "operarius",
+    "config",
+    "vue-cli",
+    "vue-cli-plugin",
+    "plugin",
+    "vue",
     "git",
     "hooks"
   ],
@@ -22,13 +26,13 @@
   "bugs": {
     "url": "https://github.com/preusx/operarius/issues"
   },
+  "homepage": "https://github.com/preusx/operarius",
   "scripts": {
     "lint": "eslint .",
     "prepublishOnly": "yarn lint"
   },
-  "homepage": "https://github.com/preusx/operarius/tree/master/packages/hooks",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "yorkie": "^2.0.0"
   },
   "devDependencies": {
     "@operarius/eslint-config": "^0.1.0",

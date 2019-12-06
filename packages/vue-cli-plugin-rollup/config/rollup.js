@@ -6,9 +6,9 @@ const node = require('rollup-plugin-node-resolve');
 const replace = require('rollup-plugin-replace');
 const VuePlugin = require('rollup-plugin-vue');
 
-const { error } = require(require.resolve('@vue/cli-shared-utils')); // eslint-disable-line import/no-dynamic-require
+const { error } = require(require.resolve('@vue/cli-shared-utils'));
 
-const { dependencies } = require(path.resolve(process.cwd(), 'package.json')); // eslint-disable-line import/no-dynamic-require
+const { dependencies } = require(path.resolve(process.cwd(), 'package.json'));
 const classifyRE = /(?:^|[-_/])(\w)/g;
 const toUpper = (_, c) => (c ? c.toUpperCase() : '');
 
@@ -22,7 +22,7 @@ const DEFAULT_BABEL_CONFIG = {
 let babelConfig = DEFAULT_BABEL_CONFIG;
 
 try {
-  babelConfig = require(path.resolve(process.cwd(), 'babel.config.js')); // eslint-disable-line import/no-dynamic-require, global-require
+  babelConfig = require(path.resolve(process.cwd(), 'babel.config.js')); // eslint-disable-line global-require
 } catch (e) {
   error('No babel.config.js file found in the project. Using default.');
 }
@@ -111,7 +111,7 @@ function getConfig({ name, version }, { entry, source, dest }, banner) {
   const entries = getEntriesOptions(entry, source, dest, moduleName, name, banner);
 
   return Object.keys(entries).map(
-    key => getEntryConfig(entries[key], moduleName, version),
+    key => getEntryConfig(entries[key], moduleName, version)
   );
 }
 

@@ -14,7 +14,7 @@ module.exports = api => ({
   fn: async args => {
     const {
       name: packageName, license, version, author,
-    } = require(api.resolve('package.json')); // eslint-disable-line import/no-dynamic-require, global-require
+    } = require(api.resolve('package.json')); // eslint-disable-line global-require
 
     const entry = args._ && args._.length && args._[0] || 'src/main.js';
     const dest = args.dest || 'dist';
@@ -30,7 +30,7 @@ module.exports = api => ({
         name, version, author, license,
       },
       { entry, source, dest: path.join(source, dest) },
-      args,
+      args
     );
   },
 });

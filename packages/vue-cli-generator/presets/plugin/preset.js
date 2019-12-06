@@ -8,7 +8,7 @@ module.exports = ({ internal } = {}) => ({
     '@vue/cli-plugin-babel': {},
     '@vue/cli-plugin-eslint': {
       config: 'base',
-      lintOn: ['save'],
+      lintOn: ['save', 'commit'],
     },
     '@operarius/vue-cli-plugin-eslint': {
       version: internal
@@ -29,6 +29,11 @@ module.exports = ({ internal } = {}) => ({
     '@operarius/vue-cli-plugin-postcss': {
       version: internal
         ? 'file:../packages/vue-cli-plugin-postcss'
+        : version,
+    },
+    '@operarius/vue-cli-plugin-git-hooks': {
+      version: internal
+        ? 'file:../packages/vue-cli-plugin-git-hooks'
         : version,
     },
   },

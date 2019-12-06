@@ -19,10 +19,19 @@ module.exports = {
       ts: 'never',
       tsx: 'never',
     }],
+    'import/no-dynamic-require': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'no-mixed-operators': 'off',
     'no-plusplus': 'off',
+    'no-useless-escape': 'off',
     'operator-linebreak': ['error', 'after', { overrides: { '?': 'ignore', ':': 'ignore' } }],
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'never',
+    }],
     'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: [

@@ -4,11 +4,22 @@
   "workspaces": [
     "packages/*"
   ],
+  "gitHooks": {
+    "pre-commit": "yarn lint && operarius-git-hooks pre-commit",
+    "pre-push": "operarius-git-hooks pre-push",
+    "post-commit": "operarius-git-hooks post-commit",
+    "post-checkout": "operarius-git-hooks post-checkout",
+    "post-merge": "operarius-git-hooks post-merge",
+    "commit-msg": "operarius-git-hooks commit-msg"
+  },
   "scripts": {
+    "lint": "lerna run lint",
     "create:plugin": "ovc check plugin --internal",
     "create:project": "ovc check project --internal"
   },
   "devDependencies": {
-    "lerna": "^3.18.4"
+    "lerna": "^3.18.4",
+    "@operarius/git-hooks": "^0.1.0",
+    "yorkie": "^2.0.0"
   }
 }
