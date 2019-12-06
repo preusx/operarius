@@ -4,9 +4,14 @@ const chalk = require('chalk');
 const process = require('process');
 const utils = require('../utils.js');
 
+const versionMatcher = /^v[0-9]+\.[0-9]+\.[0-9]+/img;
+
 module.exports = () => {
-  const file = path.resolve(process.env.PWD, process.env.HUSKY_GIT_PARAMS || process.env.GIT_PARAMS);
+  const file = path.resolve(
+    process.env.PWD, process.env.HUSKY_GIT_PARAMS || process.env.GIT_PARAMS
+  );
   const lines = fs.readFileSync(file).toString('utf-8').split('\n');
+  const isVersion = lines[0].match(versionMatcher) !== null;
 
   if (lines[0].length > 72) {
     utils.error(
@@ -15,7 +20,7 @@ module.exports = () => {
     );
   }
 
-  if (lines[0][0] === lines[0][0].toLowerCase()) {
+  if (lines[0][0] === lines[0][0].toLowerCase() && !isVersion) {
     utils.error(
       chalk.red.bold('Commit message subject first letter should be uppercase!'),
       'Please ensure the first word is capitalized.'
