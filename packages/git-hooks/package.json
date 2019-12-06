@@ -1,6 +1,6 @@
 {
   "name": "@operarius/git-hooks",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Default project git hooks",
   "bin": {
     "operarius-git-hooks": "bin/cli.js"
@@ -32,7 +32,7 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@operarius/eslint-config": "^0.2.0",
+    "@operarius/eslint-config": "^0.2.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }

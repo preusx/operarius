@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-eslint-config",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Vue eslint configuration",
   "main": "index.js",
   "publishConfig": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/preusx/operarius",
   "dependencies": {
-    "@operarius/eslint-config": "^0.2.0"
+    "@operarius/eslint-config": "^0.2.1"
   }
 }
