@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-rollup",
-  "version": "0.3.3",
+  "version": "0.3.7",
   "description": "Vue cli plugin Vue rollup development",
   "main": "index.js",
   "publishConfig": {
