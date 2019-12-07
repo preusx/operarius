@@ -1,6 +1,6 @@
 {
   "name": "@operarius/vue-cli-plugin-postcss",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "description": "Vue cli plugin for custom postcss config injection",
   "main": "index.js",
   "publishConfig": {
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@operarius/eslint-config": "^0.3.0",
-    "@operarius/postcss-config": "^0.3.4",
+    "@operarius/postcss-config": "^0.3.6",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2"
   }

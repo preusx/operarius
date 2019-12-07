@@ -1,6 +1,6 @@
 {
   "name": "@operarius/postcss-config",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "description": "Postcss configuration",
   "main": "index.js",
   "publishConfig": {
