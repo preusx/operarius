@@ -1,6 +1,9 @@
 const path = require('path');
 const { existsSync, mkdirSync } = require('fs');
 const service = require('./service');
+const {
+  normalizeAuthor, normalizeModuleName,
+} = require('./utils');
 
 module.exports = api => ({
   opts: {
@@ -18,7 +21,7 @@ module.exports = api => ({
 
     const entry = args._ && args._.length && args._[0] || 'src/main.js';
     const dest = args.dest || 'dist';
-    const name = args.name || packageName;
+    const name = normalizeModuleName(args.name || packageName);
     const source = api.getCwd();
 
     if (!existsSync(dest)) {
@@ -30,7 +33,7 @@ module.exports = api => ({
 
     return service(
       {
-        name, version, author, license,
+        name, version, author: normalizeAuthor(author), license,
       },
       {
         entry, source, aliases, dest: path.join(source, dest),
