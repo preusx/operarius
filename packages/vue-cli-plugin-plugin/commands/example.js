@@ -45,10 +45,8 @@ module.exports = api => ({
   fn: async args => {
     const context = api.getCwd();
     const entry = args._[0] || './example/main.js';
-    const open = true;
     const command = 'serve';
-    const customArgs = { open };
 
-    return service(context, entry, customArgs, command);
+    return service(context, entry, {}, command);
   },
 });

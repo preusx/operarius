@@ -41,11 +41,6 @@ module.exports = {
      */
     require('postcss-round-subpixels'),
 
-    require('autoprefixer')({
-      browsers: [
-        '> 0.1%',
-        'last 2 versions',
-      ],
-    }),
+    require('autoprefixer')({}),
   ],
 };
